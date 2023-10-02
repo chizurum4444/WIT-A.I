@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    
+	<link rel="stylesheet" href="../css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c80b0ff564.js" crossorigin="anonymous"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+<body>
+    
+     
+    <nav class="navbar has-background-black is-fullwidth" role="navigation">
+        <div class="navbar-brand">
+           <a class="navbar-item has-text-light" href="main.html" >
+                <img src="../images/brain.svg" alt="Brain" width="28" height="28" class="is-white" style="margin-right: 5px; ">
+                    WIT A.I 
+		    </a>
+        </div>
+        <div id = "mynavbar" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light" href="login.html">Login</a>
+                        <a class="button is-primary" href="signup.html">Sign up</a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <div class="background">
+        <div id="background-img"></div>
+    </div>
+    
+    <h1 class="title is-1 has-text-primary">Login</h1>
+    
+    <form class="section" method="post" action="/processLogin">
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label is-normal $black">Username:</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <input class="input" type="text" placeholder="Username" id="un">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label is-normal $black">Password:</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-key"></i>
+                        </span>
+                        <input class="input" type="text" placeholder="Password" id="pwd">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field is-grouped" id="buttons">
+            <div class="control">
+                <button class="button is-primary" id="login" type="submit">Login</button>
+            </div>
+        </div>
+        
+    </form>
+        
+</body>

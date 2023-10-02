@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-img {
+  /* Uncomment this and remove the "has-background-primary-light" in the html file */
+  /* background-image: url('https://wallpaper.dog/large/987756.jpg'); */
+  background-image: none;
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  height: 100%;
+  overflow: hidden;
+  filter: blur(5px);
+
+  /* width: 100%; */
+  height: 100%;
+
+}
+
+.link-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20%;
+  opacity: 50%;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  width: 60%;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  
+}
+
+
+
+#link-question {
+  position: fixed;
+  bottom: 20px;
+  right: 15%;
+
+  max-width: 40px;
+  max-height: 40px;
+  display: inline;
+
+  
+}
+
+
+.help {
+  /* position: relative; */
+  display: inline;
+  /* bottom: 20px;
+  right: 15%; */
+  white-space: nowrap;
+}
+
+.help .hint {
+  visibility: hidden;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  text-align: center;
+  font-size: medium;
+  color: aliceblue;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -150px;
+
+
+  position: absolute;
+  z-index: 1;
+}
+
+
+.help:hover .hint{
+  visibility: visible;
+}
+
+.navbar-item.has-text-light {
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+}
+
+#customize-wallpaper {
+  visibility: hidden;
+}

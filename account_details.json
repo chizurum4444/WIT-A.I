@@ -1,0 +1,34 @@
+{
+    "user": [
+        {
+            "id": "515611556847",
+            "username": "Test",
+            "password": "pass123"
+        },
+        {
+            "id": "6089445170230",
+            "username": "Bob",
+            "password": "The Builder"
+        }
+       
+
+    ],
+    "details": [
+        {
+            "id": "515611556847",
+            "customWallpaper": true,
+            "wallpaper": "https://images6.fanpop.com/image/photos/35800000/-Wallpapers-Full-HD-random-35881438-1920-1080.jpg",
+            "todo": [
+                {
+                    "task": "Finish website",
+                    "due": "2023-04-19"
+                },
+                {
+                    "task": "Survive",
+                    "due": "2023-04-20"
+                }
+            ],
+            "latest-video": "https://www.youtube.com/embed/7pO39Sh6THg?autoplay=1&mute=1&loop=1"
+        }
+    ]
+}
