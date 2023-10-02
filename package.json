@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Planner Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyssa-tian/Webdev-Project.git"
+  },
+  "keywords": [
+    "planner",
+    "study",
+    "study",
+    "guide"
+  ],
+  "author": "Chizurum Agomoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alyssa-tian/Webdev-Project/issues"
+  },
+  "homepage": "https://github.com/Alyssa-tian/Webdev-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "uuid": "^9.0.0"
+  }
+}
