@@ -37,9 +37,10 @@ function detectAndAnalyzeImage() {
         // Use the reader's result (binary data) to send to AWS Rekognition
         const binaryImage = reader.result;
 
+        // Insert AWS access keys
         const awsConfig = {
-            accessKeyId: 'AKIASTMBE5QO655D6GNX',
-            secretAccessKey: 'hQPpGTHNgT6WObFBsF0ZCdPnLa/Zo8TBPPkQyItr',
+            accessKeyId: '-',
+            secretAccessKey: '-',
             region: 'us-east-1', // Replace with your desired AWS region
         };
 
