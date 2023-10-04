@@ -27,6 +27,10 @@ function detectAndAnalyzeImage() {
         return;
     }
 
+    // Show the loading overlay
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.style.display = "flex";
+
     // Get the uploaded image file
     const imageFile = fileInput.files[0];
 
@@ -39,8 +43,8 @@ function detectAndAnalyzeImage() {
 
         // Insert AWS access keys
         const awsConfig = {
-            accessKeyId: '-',
-            secretAccessKey: '-',
+            accessKeyId: 'AKIASTMBE5QO655D6GNX',
+            secretAccessKey: 'hQPpGTHNgT6WObFBsF0ZCdPnLa/Zo8TBPPkQyItr',
             region: 'us-east-1', // Replace with your desired AWS region
         };
 
@@ -49,7 +53,7 @@ function detectAndAnalyzeImage() {
 
         const params = {
             Image: {
-                Bytes: binaryImage, // Use the binary image data here
+                Bytes: binaryImage,
             },
         };
 
@@ -79,6 +83,9 @@ function detectAndAnalyzeImage() {
                 // Redirect to the results page
                 window.location.href = "results.html";
             }
+
+            // Hide the loading overlay after analysis
+            loadingOverlay.style.display = "none";
         });
     };
 

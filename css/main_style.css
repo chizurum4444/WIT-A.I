@@ -3,96 +3,129 @@ html, body {
 }
 
 .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-  
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#background-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 #background-img {
-  /* Uncomment this and remove the "has-background-primary-light" in the html file */
-  /* background-image: url('https://wallpaper.dog/large/987756.jpg'); */
-  background-image: none;
+  background-image: url('https://wallpaper.dog/large/987756.jpg');
   background-position: center;
-
   background-size: cover;
   background-repeat: no-repeat;
-  
   height: 100%;
   overflow: hidden;
   filter: blur(5px);
+}
 
-  /* width: 100%; */
-  height: 100%;
+/* Update the styling for the title and subtitle */
+.title.has-text-centered {
+  font-size: 2.5em;
+  color: #f0f0f0; 
+  /* font-family: "Times New Roman", Times, serif;  */
+}
 
+.subtitle.has-text-centered {
+  font-size: 1.2em;
+  color: #f0f0f0;
+  font-family: "Times New Roman", Times, serif; 
 }
 
 .link-box {
   position: fixed;
   bottom: 20px;
   left: 20%;
-  opacity: 50%;
   text-align: center;
   font-size: large;
   font-weight: bold;
   width: 60%;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
   border-style: solid;
-  
+  border-width: 2px;
+  border-color: #333;
+  padding: 20px; 
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-
 
 #link-question {
   position: fixed;
   bottom: 20px;
   right: 15%;
-
   max-width: 40px;
   max-height: 40px;
   display: inline;
-
-  
 }
 
-
-.help {
-  /* position: relative; */
-  display: inline;
-  /* bottom: 20px;
-  right: 15%; */
-  white-space: nowrap;
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-.help .hint {
-  visibility: hidden;
-  width: 300px;
-  background-color: rgba(0, 0, 0, 0.5);
-  
-  text-align: center;
-  font-size: medium;
-  color: aliceblue;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -150px;
-
-
-  position: absolute;
-  z-index: 1;
+.button:hover {
+  background-color: #4CAF50; 
+  color: #fff; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
 }
 
-
-.help:hover .hint{
+.help:hover .hint {
   visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .navbar-item.has-text-light {
-  font-family: "Times New Roman", Times, serif;
-  font-size: larger;
+  font-family: 'Times', serif; 
+  font-size: 1.2em; 
+}
+
+/* Loading pop-up */
+#loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #customize-wallpaper {

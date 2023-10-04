@@ -1,63 +1,50 @@
 .results-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; 
 }
 
 .image-container {
-  flex: 1; /* Takes 50% of the container width */
-  margin-right: 20px; /* Adjust margin as needed */
+  flex: 1;
+  margin-right: 20px;
+  border: 2px solid #333;
+  padding: 20px; 
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .table-container {
-  flex: 1; /* Takes 50% of the container width */
+  flex: 1;
 }
 
-/* Add this CSS to your results.css or main_style.css */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table th, table td {
-  padding: 10px; /* Adjust the padding value as needed */
+  padding: 15px; 
   text-align: left;
-}
-
-/* Optionally, you can target only the "Name" and "Confidence" columns */
-table th:first-child, table td:first-child {
-  /* Padding for the "Name" column */
-}
-
-table th:last-child, table td:last-child {
-  /* Padding for the "Confidence" column */
+  border-bottom: 1px solid #ddd;
 }
 
 .background {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-#background-img {
-  /* Uncomment this and remove the "has-background-primary-light" in the html file */
-  /* background-image: url('https://wallpaper.dog/large/987756.jpg'); */
-  background-position: center;
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  
+#background-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-  filter: blur(5px);
-
-  /* width: 100%; */
-  height: 100%;
-
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-
-
