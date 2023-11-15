@@ -22,7 +22,7 @@ window.onload = function () {
    // createBarChart(labelsAndConfidences);
 }
 
-// Create the bar chart
+// Create the bar chart (WORK IN PROGRESS)
 function createBarChart(analysisResults) {
     // Extract labels and confidence levels from the data
     const labels = analysisResults.map((item) => item.Name);
